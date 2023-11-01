@@ -1,4 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace BEcommerce.Server.Controllers
 {
@@ -35,9 +40,9 @@ namespace BEcommerce.Server.Controllers
         };
 
         [HttpGet]
-        public Task<IActionResult> GetProducts()
+        public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            return Task.FromResult<IActionResult>(Ok(Products));
+            return Ok(Products);
         }
     }
 }
