@@ -1,3 +1,4 @@
+global using BEcommerce.Shared;
 using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
