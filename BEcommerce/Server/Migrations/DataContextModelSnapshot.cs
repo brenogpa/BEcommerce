@@ -59,6 +59,12 @@ namespace BEcommerce.Server.Migrations
                             Id = 3,
                             Name = "Games",
                             Url = "games"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Consoles",
+                            Url = "consoles"
                         });
                 });
 
@@ -81,9 +87,6 @@ namespace BEcommerce.Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -101,7 +104,6 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 1,
                             Description = "The Fellowship of the Ring is the first of three volumes of the epic novel[2] The Lord of the Rings by the English author J. R. R. Tolkien. It is followed by The Two Towers and The Return of the King. The action takes place in the fictional universe of Middle-earth. The book was first published on 29 July 1954 in the United Kingdom. The volume consists of a foreword, in which the author discusses his writing of The Lord of the Rings, a prologue titled \"Concerning Hobbits, and other matters\", and the main narrative in Book I and Book II.",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/8/8e/The_Fellowship_of_the_Ring_cover.gif",
-                            Price = 9.99m,
                             Title = "The Fellowship of the Ring"
                         },
                         new
@@ -110,7 +112,6 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 1,
                             Description = "The Two Towers is the second volume of J. R. R. Tolkien's high fantasy novel The Lord of the Rings. It is preceded by The Fellowship of the Ring and followed by The Return of the King. The volume's title is ambiguous, as five towers are named in the narrative, and Tolkien himself gave conflicting identifications of the two towers. The narrative is interlaced, allowing Tolkien to build in suspense and surprise. The volume was largely welcomed by critics, who found it exciting and compelling, combining epic narrative with heroic romance.",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/a/a1/The_Two_Towers_cover.gif",
-                            Price = 9.99m,
                             Title = "The Two Towers"
                         },
                         new
@@ -119,7 +120,6 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 1,
                             Description = "The Return of the King is the third and final volume of J. R. R. Tolkien's The Lord of the Rings, following The Fellowship of the Ring and The Two Towers. It was published in 1955. The story begins in the kingdom of Gondor, which is soon to be attacked by the Dark Lord Sauron.\n\nThe volume was praised by literary figures including W. H. Auden, Anthony Price, and Michael Straight, but attacked by Edwin Muir who had praised The Fellowship of the Ring.\n\nThe chapter \"The Scouring of the Shire\", and a chapter-length narrative in the appendices, \"The Tale of Aragorn and Arwen\", have attracted discussion by scholars and critics.",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/1/11/The_Return_of_the_King_cover.gif",
-                            Price = 9.99m,
                             Title = "The Return of the King"
                         },
                         new
@@ -128,7 +128,6 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 3,
                             Description = "The Legend of Zelda: Ocarina of Time[a] é um jogo eletrônico de ação e aventura desenvolvido e publicado pela Nintendo para o Nintendo 64. Foi lançado no Japão e na América do Norte em novembro de 1998 e nas regiões PAL no mês seguinte. Ocarina of Time é o primeiro jogo da série The Legend of Zelda com gráficos 3D.",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/pt/thumb/1/17/The_Legend_of_Zelda_Ocarina_of_Time_capa.png/280px-The_Legend_of_Zelda_Ocarina_of_Time_capa.png",
-                            Price = 15.99m,
                             Title = "The Legend of Zelda: Ocarina of Time"
                         },
                         new
@@ -137,7 +136,6 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 3,
                             Description = "The Legend of Zelda: Majora's Mask (ゼルダの伝説: ムジュラの仮面 Zeruda no Densetsu: Mujura no Kamen?) é um jogo eletrônico de ação-aventura desenvolvido e publicado pela Nintendo para o console Nintendo 64. Ele foi lançado mundialmente em 2000 como o sexto jogo da série The Legend of Zelda e o segundo a empregar gráficos em 3D depois de The Legend of Zelda: Ocarina of Time de 1998, do qual ele é uma sequência direta. ",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/pt/thumb/3/35/The_Legend_of_Zelda_Majora%27s_Mask_capa.png/280px-The_Legend_of_Zelda_Majora%27s_Mask_capa.png",
-                            Price = 16.99m,
                             Title = "The Legend of Zelda: Majora's Mask"
                         },
                         new
@@ -146,7 +144,6 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 3,
                             Description = "The Legend of Zelda: The Wind Waker (ゼルダの伝説 風のタクト Zeruda no Densetsu: Kaze no Takuto?) é um jogo eletrônico de ação-aventura desenvolvido pela Nintendo Entertainment Analysis & Development e publicado pela Nintendo. É o décimo título da série The Legend of Zelda e foi lançado exclusivamente para GameCube em dezembro de 2002 no Japão, março de 2003 na América do Norte e maio na Europa.",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/pt/thumb/0/06/The_Legend_of_Zelda_The_Wind_Waker_capa.png/270px-The_Legend_of_Zelda_The_Wind_Waker_capa.png",
-                            Price = 14.99m,
                             Title = "The Legend of Zelda: The Wind Waker"
                         },
                         new
@@ -155,7 +152,6 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 2,
                             Description = "The Wolf of Wall Street (bra/prt: O Lobo de Wall Street)[3][4] é um filme estadunidense de 2013, do gênero comédia dramático-biográfico-policial, dirigido por Martin Scorsese, com roteiro de Terence Winter baseado nas memórias de Jordan Belfort, The Wolf of Wall Street.[5]",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/pt/thumb/8/8d/The_Wolf_of_Wall_Street.jpg/250px-The_Wolf_of_Wall_Street.jpg",
-                            Price = 7.99m,
                             Title = "O Lobo de Wall Street"
                         },
                         new
@@ -164,7 +160,6 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 2,
                             Description = "Interstellar (no Brasil, Interestelar) é um filme anglo-americano de ficção científica dirigido por Christopher Nolan e estrelado por Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Mackenzie Foy, Matt Damon, John Lithgow e Michael Caine. Ele conta a história de uma equipe de astronautas que viaja através de um buraco de minhoca à procura de um novo lar para a humanidade. ",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/pt/thumb/3/3a/Interstellar_Filme.png/250px-Interstellar_Filme.png",
-                            Price = 9.99m,
                             Title = "Interstellar"
                         },
                         new
@@ -173,8 +168,256 @@ namespace BEcommerce.Server.Migrations
                             CategoryId = 2,
                             Description = "Donnie (Jake Gyllenhaal) é um inteligente jovem de classe média, porém antissocial. Ele tem visões de um coelho monstruoso que o convence a fazer brincadeiras humilhantes com seus colegas. Numa dessas visões, o coelho anuncia o fim do mundo em um mês, e eventos terríveis começam a assombrá-lo.",
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/pt/thumb/5/58/Donnie_Darko.jpg/220px-Donnie_Darko.jpg",
-                            Price = 8.99m,
                             Title = "Donnie Darko"
+                        });
+                });
+
+            modelBuilder.Entity("BEcommerce.Shared.ProductType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Default"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Paperback"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "E-Book"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Audiobook"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Stream"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Blu-ray"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "VHS"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "PC"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "PlayStation"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "Xbox"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Name = "Nintendo64"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Name = "GameBoy"
+                        });
+                });
+
+            modelBuilder.Entity("BEcommerce.Shared.ProductVariant", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("OriginalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("ProductId", "ProductTypeId");
+
+                    b.HasIndex("ProductTypeId");
+
+                    b.ToTable("ProductVariants");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductId = 1,
+                            ProductTypeId = 2,
+                            OriginalPrice = 19.99m,
+                            Price = 9.99m
+                        },
+                        new
+                        {
+                            ProductId = 1,
+                            ProductTypeId = 3,
+                            OriginalPrice = 0m,
+                            Price = 7.99m
+                        },
+                        new
+                        {
+                            ProductId = 1,
+                            ProductTypeId = 4,
+                            OriginalPrice = 29.99m,
+                            Price = 19.99m
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            ProductTypeId = 2,
+                            OriginalPrice = 19.99m,
+                            Price = 9.99m
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            ProductTypeId = 3,
+                            OriginalPrice = 0m,
+                            Price = 7.99m
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            ProductTypeId = 4,
+                            OriginalPrice = 29.99m,
+                            Price = 19.99m
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            ProductTypeId = 2,
+                            OriginalPrice = 19.99m,
+                            Price = 9.99m
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            ProductTypeId = 3,
+                            OriginalPrice = 0m,
+                            Price = 7.99m
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            ProductTypeId = 4,
+                            OriginalPrice = 29.99m,
+                            Price = 19.99m
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            ProductTypeId = 11,
+                            OriginalPrice = 29.99m,
+                            Price = 15.99m
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            ProductTypeId = 12,
+                            OriginalPrice = 19.99m,
+                            Price = 12.99m
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            ProductTypeId = 11,
+                            OriginalPrice = 0m,
+                            Price = 19.99m
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            ProductTypeId = 12,
+                            OriginalPrice = 59.99m,
+                            Price = 49.99m
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            ProductTypeId = 11,
+                            OriginalPrice = 24.99m,
+                            Price = 9.99m
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            ProductTypeId = 12,
+                            OriginalPrice = 0m,
+                            Price = 14.99m
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            ProductTypeId = 6,
+                            OriginalPrice = 299m,
+                            Price = 159.99m
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            ProductTypeId = 7,
+                            OriginalPrice = 399m,
+                            Price = 79.99m
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            ProductTypeId = 6,
+                            OriginalPrice = 299m,
+                            Price = 159.99m
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            ProductTypeId = 7,
+                            OriginalPrice = 399m,
+                            Price = 79.99m
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            ProductTypeId = 6,
+                            OriginalPrice = 299m,
+                            Price = 159.99m
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            ProductTypeId = 7,
+                            OriginalPrice = 399m,
+                            Price = 79.99m
                         });
                 });
 
@@ -187,6 +430,30 @@ namespace BEcommerce.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("BEcommerce.Shared.ProductVariant", b =>
+                {
+                    b.HasOne("BEcommerce.Shared.Product", "Product")
+                        .WithMany("Variants")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BEcommerce.Shared.ProductType", "ProductType")
+                        .WithMany()
+                        .HasForeignKey("ProductTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("ProductType");
+                });
+
+            modelBuilder.Entity("BEcommerce.Shared.Product", b =>
+                {
+                    b.Navigation("Variants");
                 });
 #pragma warning restore 612, 618
         }
